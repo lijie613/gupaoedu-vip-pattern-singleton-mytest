@@ -8,17 +8,19 @@ import com.gupaoedu.vip.pattern.singleton.threadlocal.ThreadLocalSingleton;
 public class ExecutorThread implements Runnable {
     public void run() {
 //        LazySimpleSingleton singleton = LazySimpleSingleton.getInstance();
-//        LazyDoubleCheckSingleton singleton = LazyDoubleCheckSingleton.getInstance();
+        LazyDoubleCheckSingleton singleton = LazyDoubleCheckSingleton.getInstance();
 //        LazyInnerClassSingleton singleton = LazyInnerClassSingleton.getInstance();
 
-        ThreadLocalSingleton singleton = ThreadLocalSingleton.getInstance();
+        System.out.println(singleton);
+
+        /*ThreadLocalSingleton singleton = ThreadLocalSingleton.getInstance();
         System.out.println(singleton);
         System.out.println(ThreadLocalSingleton.getInstance());
         System.out.println(ThreadLocalSingleton.getInstance());
         System.out.println(ThreadLocalSingleton.getInstance());
         System.out.println(ThreadLocalSingleton.getInstance());
         System.out.println(ThreadLocalSingleton.getInstance());
-        System.out.println(Thread.currentThread().getName() + ":" + singleton);
+        System.out.println(Thread.currentThread().getName() + ":" + singleton);*/
 
 
     }
